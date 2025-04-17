@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Haven - Online Bookstore</title>
+
+  <!-- CSS  -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #008080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #f1c40f;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main {
+      padding: 30px 20px;
+    }
+    section {
+      background-color: #fff;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .book-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .book-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .book-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .book-card .info {
+      padding: 15px;
+    }
+    .book-card .info strong {
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #357abd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Book Haven</h1>
+    <p>Your go-to online bookstore for every genre</p>
+  </header>
+
+  <nav>
+    <a href="#featured">Home</a>
+    <a href="#genres">Genres</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="featured">
+      <h2>Featured Books</h2>
+      <div class="book-grid">
+        <div class="book-card">
+          <img src="https://images.pexels.com/photos/7610446/pexels-photo-7610446.jpeg" alt="The Explorer's Guide">
+          <div class="info">
+            <strong>The Explorer's Guide</strong>
+            <span>by A. Rivers (Adventure, 2021)</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="https://images.pexels.com/photos/30562777/pexels-photo-30562777.jpeg" alt="Mystery Manor">
+          <div class="info">
+            <strong>Mystery Manor</strong>
+            <span>by L. Holmes (Mystery, 2022)</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <img src="https://images.pexels.com/photos/4445619/pexels-photo-4445619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+          <div class="info">
+            <strong>Digital Dreams</strong>
+            <span>by K. Byte (Sci-Fi, 2020)</span>
+          </div>
+        </div>
+        <div class="book-card">
+            <img src="https://images.pexels.com/photos/2954199/pexels-photo-2954199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/2090104/pexels-photo-2090104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/11954964/pexels-photo-11954964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/14819803/pexels-photo-14819803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/3305128/pexels-photo-3305128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/10575087/pexels-photo-10575087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images.pexels.com/photos/6825759/pexels-photo-6825759.jpeg" alt="Digital Dreams">
+            <div class="info">
+              <strong>Digital Dreams</strong>
+              <span>by K. Byte (Sci-Fi, 2020)</span>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+
+    <section id="genres">
+      <h2>Genres We Cover</h2>
+      <p>At Book Haven, we offer a wide variety of genres including:</p>
+      <ul>
+        <li>Fiction & Non-fiction</li>
+        <li>Science Fiction & Fantasy</li>
+        <li>Biographies & Memoirs</li>
+        <li>Romance, Mystery & Thriller</li>
+        <li>Self-Help & Motivational</li>
+        <li>Children's Books & Young Adult</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About Book Haven</h2>
+      <p>Founded in 2010, Book Haven provides a curated collection of books across all genres. We aim to foster a love for reading through carefully selected titles and an intuitive user experience.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Book Haven. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
